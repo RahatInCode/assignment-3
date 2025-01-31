@@ -9,7 +9,13 @@
         .primary{
             background-color: #FFF9F4;
         }
+
+      .btn-primary{
+        background-color: #FFDC26;
+      }
+
     </style>
+    <!-- i changed the brand name -->
     <title>Paw4Shop</title>
     <link rel="shortcut icon" href="c1-assets/logo-header.png" type="image/x-icon">
 </head>
@@ -17,32 +23,34 @@
     <!-- header section -->
      <header>
 
-<!-- navbar section(i will add animation) -->
- <nav class="w-full h-14 primary flex justify-between px-36">
-    <div class="flex items-center gap-x-4 "> 
-    <img src="c1-assets/logo-header.png" alt=""> 
-    <h2 class="text-xl font-bold">Paw<span class="text-amber-400">4</span>Shop</h2>
+<!-- navbar section -->
+<nav class="w-full h-14 primary flex items-center justify-between px-6 md:px-36">
+    <!-- Logo & Brand Name -->
+    <div class="flex items-center space-x-5">
+        <img src="c1-assets/logo-header.png" alt="Logo" class="h-8">
+        <h2 class="text-xl font-medium">Paw<span class="text-[#FFDC26]">4</span>Pets</h2>
     </div>
-  <!-- navigation links (disappear in small screens) -->
-   <div class="hidden md:flex gap-6">
-    <div class="flex justify-center gap-6 items-center">
+
+    <!-- Navigation Links (Hidden on Small Screens) -->
+    <div class="hidden md:flex items-center space-x-6 font-medium">
         <a href="">Find a pet</a>
         <a href="">Breeds</a>
         <a href="">Contact Us</a>
     </div>
 
-    <div class="flex justify-center gap-6 items-center">
-     <a href=""><i class="fa-solid fa-bell"></i></a>
-     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-     <button class="">Login</button>
-     <button>Register</button>
+    <!-- Icons & Buttons (Hidden on Small Screens) -->
+    <div class="hidden md:flex items-center space-x-6">
+        <a href=""><i class="fa-solid fa-bell"></i></a>
+        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        <button class="border-2 px-4 py-1 rounded font-medium" style="border-color: #FFDC26;">login</button>
+        <button class="bg-[#FFDC26] text-black px-4 py-1 rounded font-medium">Register</button>
     </div>
-   </div>
-    <!-- hamBurger icon ( showed only in small screens) -->
+
+    <!-- Hamburger Icon (Visible Only on Small Screens) -->
     <button class="block md:hidden">
         <i class="fa-solid fa-bars text-2xl"></i>
     </button>
- </nav>
+</nav>
      </header>
 </body>
 </html>
