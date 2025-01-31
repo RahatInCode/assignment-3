@@ -13,6 +13,17 @@
       .btn-primary{
         background-color: #FFDC26;
       }
+      
+      @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
     </style>
     <!-- i changed the brand name -->
@@ -43,14 +54,63 @@
         <a href=""><i class="fa-solid fa-bell"></i></a>
         <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
         <button class="border-2 px-4 py-1 rounded font-medium" style="border-color: #FFDC26;">login</button>
-        <button class="bg-[#FFDC26] text-black px-4 py-1 rounded font-medium">Register</button>
+        <button class="btn-primary text-black px-4 py-1 rounded font-medium">Register</button>
     </div>
 
-    <!-- Hamburger Icon (Visible Only on Small Screens) -->
+    <!-- Hamburger Icon (showed in small screen)-->
     <button class="block md:hidden">
         <i class="fa-solid fa-bars text-2xl"></i>
     </button>
 </nav>
+
+<!-- Hero section -->
+<!-- challenge:i will add ease in out animation here when the website is hovered,opened and browsed back -->
+
      </header>
+
+     <main>
+<!-- challenge : i am creating a find a pet section of my own  -->
+<section class="w-full mx-[0px] mt-[60px]">
+    <!-- Section Heading -->
+    <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-gray-800">Find Your Perfect Pet Companion</h2>
+        <p class="text-lg text-gray-600 mt-2">Search for adorable pets looking for a loving home.</p>
+    </div>
+<!-- ydrguwhgfwuifgwhgf -->
+<div class="mx-[90px] mt-[60px] py-12 px-6  rounded-lg primary">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Find a Pet friend today..</h2>
+    <p class="text-lg text-center text-gray-600 mb-8">Browse through our selection of adorable pets looking for a loving home.</p>
+    
+    <div class="mb-8 flex justify-center gap-4">
+        <input type="text" placeholder="Search for a pet..." class="w-full max-w-[350px] md:max-w-[400px] lg:max-w-[450px] p-3 border border-gray-300 rounded-lg shadow-sm ">
+        <a href=""><i class="fa-solid fa-magnifying-glass text-2xl mt-3"></i></a>
+    </div>
+    <!-- Pet Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="c1-assets/golden-retriver.jpeg" alt="Golden Retriever" class="w-full h-60 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Golden Retriever</h3>
+                <p class="text-gray-600 mb-4">Friendly and energetic companion.</p>
+                <button class="btn-primary w-full py-2 rounded-lg">Adopt Now</button>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="c1-assets/British Shorthair.jpeg" alt="British Shorthair" class="w-full h-60 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">British Shorthair</h3>
+                <p class="text-gray-600 mb-4">Calm and affectionate breed.</p>
+                <button class="btn-primary w-full py-2 rounded-lg">Adopt Now</button>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="c1-assets/Parrot.jpg" alt="Parrot" class="w-full h-60 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Parrot</h3>
+                <p class="text-gray-600 mb-4">Intelligent and talkative pet.</p>
+                <button class="btn-primary w-full py-2 rounded-lg">Adopt Now</button>
+            </div>
+        </div>
+    </div>
+    
+</section>
+     </main>
 </body>
 </html>
