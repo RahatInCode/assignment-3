@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style>
@@ -17,6 +20,14 @@
      body button{
         cursor: pointer;
      }
+
+     .sora-font{
+  font-family: "Sora", serif;
+}
+
+.adlam-display{
+  font-family: "ADLaM Display", serif;
+}
 
       @keyframes fadeInUp {
   from {
@@ -43,18 +54,18 @@
     <!-- Logo & Brand Name -->
     <div class="flex items-center space-x-5">
         <img src="c1-assets/logo-header.png" alt="Logo" class="h-8">
-        <h2 class="text-xl font-medium">Paw<span class="text-[#FFDC26]">4</span>Pets</h2>
+        <h2 class="text-xl font-medium adlam-display">Paw<span class="text-[#FFDC26]">4</span>Pets</h2>
     </div>
 
     <!-- Navigation Links (Hidden on Small Screens) -->
-    <div class="hidden md:flex items-center space-x-6 font-medium">
+    <div class="hidden md:flex items-center space-x-6 font-medium sora-font">
         <a href="">Find a pet</a>
         <a href="">Breeds</a>
         <a href="">Contact Us</a>
     </div>
 
     <!-- Icons & Buttons (Hidden on Small Screens) -->
-    <div class="hidden md:flex items-center space-x-6">
+    <div class="hidden md:flex items-center space-x-6 sora-font">
         <a href=""><i class="fa-solid fa-bell"></i></a>
         <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
         <button class="border-2 px-4 py-1 rounded font-medium" style="border-color: #FFDC26;">login</button>
@@ -74,7 +85,7 @@
 
      <main>
 <!-- challenge : i am creating a find a pet section of my own  -->
-<section class="w-full mx-[0px] mt-[60px]">
+<section class="w-full mx-[0px] mt-[60px] adlam-display">
     <!-- Section Heading -->
     <div class="text-center mb-8">
         <h2 class="text-4xl font-bold text-gray-800">Find Your Perfect Pet Companion</h2>
@@ -95,41 +106,41 @@
             <img src="c1-assets/golden-retriver.jpeg" alt="Golden Retriever" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">Golden Retriever</h3>
             <p class="text-gray-600 mb-4">Friendly and energetic companion.</p>
-            <button class="btn-primary w-full py-2 rounded-lg">Adopt Now</button>
+            <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/British Shorthair.jpeg" alt="British Shorthair" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">British Shorthair</h3>
             <p class="text-gray-600 mb-4">Calm and affectionate breed.</p>
-            <button class="btn-primary w-full py-2 rounded-lg">Adopt Now</button>
+            <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/Parrot.jpg" alt="Parrot" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">Parrot</h3>
             <p class="text-gray-600 mb-4">Intelligent and talkative pet.</p>
-            <button class="btn-primary w-full py-2 rounded-lg">Adopt Now</button>
+            <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/guinea-pig.png" alt="Guinea-pig" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">Guinea-pig</h3>
             <p class="text-gray-600 mb-4">Cute and friendly pet.</p>
-            <button class="btn-primary w-full py-2 rounded-lg">Adopt Now</button>
+            <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/goat-lionel-messi.avif" alt="goat-Leo10" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">Goat</h3>
             <p class="text-gray-600 mb-4">goats are  known for their playful behavior</p>
-            <button class="btn-primary w-full py-2 rounded-lg">Adopt Now</button>
+            <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/ferret.jpg" alt="Parrot" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">Ferret</h3>
             <p class="text-gray-600 mb-4">small, curious,playful and energetic personalities.</p>
-            <button class="btn-primary w-full py-2 rounded-lg">Adopt Now</button>
+            <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
     </div>
 </div>
