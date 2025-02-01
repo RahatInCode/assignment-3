@@ -29,15 +29,22 @@
   font-family: "ADLaM Display", serif;
 }
 
-      @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes fadeScale {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+h1 {
+  animation: fadeScale 1.2s ease-out forwards;
+}
+
+.bg-contain {
+  animation: float 4s ease-in-out infinite;
 }
 
     </style>
@@ -79,32 +86,31 @@
 </nav>
 
 <!-- Hero section -->
-<!-- challenge:i will add ease in out animation here when the website is hovered,opened and browsed back -->
-    <!--needs updates-->
-    <div class="flex items-center justify-center min-h-screen relative px-4 sm:px-6 md:px-8">
-        <div class="w-full mt-[100px] relative animate-fade-in">
-            <div class="flex flex-col lg:flex-row items-center justify-center relative">
-                <!-- Hero Content -->
-                <div class="absolute left-0 lg:left-10 top-1/2 transform -translate-y-1/2 text-left lg:w-2/5 px-8 sm:w-full mb-8 lg:mb-0">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-                        Pamper Your Pet,<br>Because They Deserve the 
-                        <span class="btn-primary rounded-lg inline-block px-2">Best</span>
-                    </h1>                
-                    <p class="text-gray-600 text-base sm:text-lg lg:text-xl mb-6">
-                        Discover a world of treats, toys, and essentials handpicked for your furry friends. 
-                        Shop now and make tails wag with joy!
-                    </p>
-                    <a href="#" class="btn-primary hover:shadow-md text-black px-8 py-4 rounded-lg text-lg font-medium">
-                        Find a pet
-                    </a>
-                </div>
-                <!-- Cat Image -->
-                <div class="lg:w-full sm:w-full mt-6 lg:mt-0 animate-fade-in">
-                    <img src="c1-assets/cat-big.png" alt="Cat" class="w-full h-auto max-w-full object-cover">
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- i added animation on the heading and image when the page is refreshed -->
+    <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen relative">
+      <!-- Hero Content (Heading) -->
+      <div class="w-full lg:w-[calc(100%-8.75rem-700px)] px-4 lg:px-0 mb-8 lg:mb-0 order-2 lg:order-1 text-center lg:text-left lg:ml-[8.75rem]">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 adlam-display">
+              Pamper Your Pet,<br>Because They Deserve the 
+              <span class="bg-primary text-orange-200 rounded-lg inline-block px-2">Best</span>
+          </h1>                
+          <p class="text-gray-600 text-base sm:text-lg lg:text-xl mb-6 sora-font">
+              Discover a world of treats, toys, and essentials handpicked for your furry friends. 
+              Shop now and make tails wag with joy!
+          </p>
+          <a href="#" class="inline-block btn-primary hover:bg-primary/90 text-black px-8 py-4 rounded-lg text-lg font-medium transition-colors sora-font">
+              Find a pet
+          </a>
+      </div>
+  
+      <!-- Cat Image (Background) -->
+      <div class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:w-[900px] lg:h-screen bg-contain bg-center bg-no-repeat order-1 lg:order-2 lg:ml-16" 
+      style="background-image: url('/c1-assets/cat-big.png');">
+      </div>
+
+
+
+  </div>
      </header>
 
      <main>
@@ -225,20 +231,91 @@
     </section>
 
     <!-- Everyday low price section -->
-     <section>
+    <section class="relative px-6">
+      <!-- Heading -->
+      <h3 class="text-2xl font-bold mb-6 md:mb-10 text-left lg:ml-[8.75rem]">Everyday Low Price</h3>
+    
+      <!-- Cards Container -->
+      <div class="flex flex-col lg:flex-row mx-auto my-10 lg:mx-[8.75rem] gap-6">
+        
+        <!-- First Card (Wider & Shorter) -->
+        <div class="flex flex-row items-center bg-gradient-to-t from-[#F8CCFB] to-[#ACD2FD] w-full lg:w-[70%] rounded-xl p-6 min-h-[200px]">
+          <div class="text-center md:text-left flex-1">
+            <p class="text-gray-700">Under Price</p>
+            <h3 class="text-xl font-semibold">Pet Grooming Mitt</h3>
+            <p class="text-gray-600">(Easy Hair Removal)</p>
+            <h3 class="text-2xl font-bold">$7.99</h3>
+          </div>
+          <div class="flex-1 flex justify-center">
+            <img src="c1-assets/cute-dog-mid.png" alt="Pet Grooming Mitt" class="h-48 md:h-56 lg:h-72 object-contain">
+          </div>
+        </div>
+    
+        <!-- Second Card (Remains the Same) -->
+        <div class="flex flex-row items-center bg-gradient-to-t from-[#F9DF8A] to-[#FFF9F4] w-full lg:w-1/3 rounded-xl p-6">
+          <div class="text-center md:text-left">
+            <h3 class="text-lg font-semibold">T-Shirt for Dogs</h3>
+            <h3 class="text-yellow-400 text-2xl font-bold">$7.99</h3>
+          </div>
+          <div>
+            <img src="c1-assets/cute-pet-mid.png" alt="T-Shirt for Dogs" class="h-32 md:h-40 lg:h-48">
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
        
-     </section>
-      <!-- news section -->
-       <section>
+<!-- Newsletter Section -->
+<section class="bg-[#FFF9F4] p-8 rounded-lg max-w-4xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-10 relative z-10 shadow-lg lg:translate-y-1/4">
+  <div class="lg:w-1/2 text-center lg:text-left">
+    <h2 class="text-2xl font-bold">Get Pawsome News!</h2>
+    <p class="text-gray-600">Exclusive training tips, tricks, product deals, and more.</p>
+    <div class="space-y-3 mt-4">
+      <input type="email" placeholder="Enter email..." class="w-full p-2 border rounded-md">
+      <button class="bg-yellow-400 px-6 py-2 rounded-md font-medium hover:bg-yellow-500 transition-colors">
+        Subscribe
+      </button>
+    </div>
+  </div>
+  <div class="lg:w-1/2 flex justify-center">
+    <img src="c1-assets/cute-pet-mid.png" alt="Newsletter Image" class="h-40 md:h-48 lg:h-56 object-contain">
+  </div>
+</section>
 
-       </section>
+<!-- Footer -->
+<section class="bg-[#ffdb26e0] py-24 relative">
+  <footer class="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between text-center lg:text-left items-center lg:items-start px-6 lg:px-36 gap-8">
+    <!-- Logo & Brand -->
+    <div class="flex flex-col items-center lg:items-start gap-5">
+      <div class="flex gap-3 items-center">
+        <img src="c1-assets/logo-footer.png" alt="Logo" class="h-10">
+        <h2 class="text-xl font-medium">Paw<span class="text-white">4</span>Pets</h2>
+      </div>
+      <p class="text-sm">Discover a world of treats, toys, and essentials handpicked for your furry friends.</p>
+    </div>
 
-       <!-- Footer -->
-        <section>
-            <footer>
+    <!-- Navigation Links -->
+    <div class="flex flex-col gap-4">
+      <a href="#" class="hover:underline">Find a pet</a>
+      <a href="#" class="hover:underline">Breeds</a>
+      <a href="#" class="hover:underline">Contact us</a>
+    </div>
 
-            </footer>
-        </section>
+    <!-- Social Media -->
+    <div class="flex flex-col items-center lg:items-start gap-4">
+      <span class="font-semibold">Follow us</span>
+      <div class="flex gap-5 text-lg">
+        <a href="#"><i class="fa-brands fa-facebook hover:text-gray-700"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram hover:text-gray-700"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin hover:text-gray-700"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube hover:text-gray-700"></i></a>
+      </div>
+    </div>
+  </footer>
+</section>
+
+
      </main>
 </body>
 </html>
