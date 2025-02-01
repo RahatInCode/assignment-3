@@ -47,9 +47,16 @@ h1 {
   animation: float 4s ease-in-out infinite;
 }
 
+button:hover{
+background-color: #FFEB3B;
+}
+
+#hero a:hover{
+  background-color: #FFEB3B;
+}
     </style>
     <!-- i changed the brand name -->
-    <title>Paw4Shop</title>
+    <title>Paw4Pets</title>
     <link rel="shortcut icon" href="c1-assets/logo-header.png" type="image/x-icon">
 </head>
 <body>
@@ -87,7 +94,7 @@ h1 {
 
 <!-- Hero section -->
 <!-- i added animation on the heading and image when the page is refreshed -->
-    <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen relative">
+    <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen relative" id="hero">
       <!-- Hero Content (Heading) -->
       <div class="w-full lg:w-[calc(100%-8.75rem-700px)] px-4 lg:px-0 mb-8 lg:mb-0 order-2 lg:order-1 text-center lg:text-left lg:ml-[8.75rem]">
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 adlam-display">
@@ -108,8 +115,6 @@ h1 {
       style="background-image: url('/c1-assets/cat-big.png');">
       </div>
 
-
-
   </div>
      </header>
 
@@ -119,9 +124,19 @@ h1 {
     <!-- Section Heading -->
     <div class="text-center mb-8">
         <h2 class="text-4xl font-bold text-gray-800">Find Your Perfect Pet Companion</h2>
-        <p class="text-lg text-gray-600 mt-2">Order the best and trusted <br>
-        pet food from us</p>
+        <p class="text-lg text-gray-600 mt-2">Order the best and healthy <br>
+        <span class="text-red-300">pet food</span> from us</p>
     </div>
+    <!-- i added a video of a cat -->
+    <div>
+      <video class="w-full max-w-[560px] h-auto rounded-lg shadow-lg mx-auto" autoplay loop muted playsinline>
+        <source src="c1-assets/cat-video.mp4.crdownload" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+    </div>
+
+    <!-- challenge: i added a section of my own -->
 <div class="mx-[90px] mt-[60px] py-12 px-6 rounded-lg primary">
     <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Find a Pet friend today..</h2>
     <p class="text-lg text-center text-gray-600 mb-8">Browse through our selection of adorable pets looking for a loving home.</p>
@@ -132,6 +147,7 @@ h1 {
     </div>
 
     <!-- Pet Cards -->
+     <!-- card 1 -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/golden-retriver.jpeg" alt="Golden Retriever" class="w-full h-60 object-cover rounded-md mb-4">
@@ -139,34 +155,35 @@ h1 {
             <p class="text-gray-600 mb-4">Friendly and energetic companion.</p>
             <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
-
+<!-- card 2 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/British Shorthair.jpeg" alt="British Shorthair" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">British Shorthair</h3>
             <p class="text-gray-600 mb-4">Calm and affectionate breed.</p>
             <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
-
+<!-- card 3 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/Parrot.jpg" alt="Parrot" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">Parrot</h3>
             <p class="text-gray-600 mb-4">Intelligent and talkative pet.</p>
             <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
+        <!-- card 4 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/guinea-pig.png" alt="Guinea-pig" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">Guinea-pig</h3>
             <p class="text-gray-600 mb-4">Cute and friendly pet.</p>
             <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
-
+<!-- card 5 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/goat-lionel-messi.avif" alt="goat-Leo10" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">Goat</h3>
             <p class="text-gray-600 mb-4">goats are  known for their playful behavior</p>
             <button class="btn-primary w-full py-2 rounded-lg sora-font">Adopt Now</button>
         </div>
-
+<!-- card 6 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="c1-assets/ferret.jpg" alt="Parrot" class="w-full h-60 object-cover rounded-md mb-4">
             <h3 class="text-xl font-semibold text-gray-800">Ferret</h3>
@@ -179,7 +196,7 @@ h1 {
 
 <!-- Browse by categories section -->
 <section class="container mx-auto px-[8.75rem] py-8 ">
-    <h2 class="text-2xl font-bold mb-6 adlam-display ">Browse By Categories</h2>
+    <h2 class="text-2xl font-bold mb-6 md:mb-10 text-left lg:ml-[0.75rem] adlam-display ">Browse By Categories</h2>
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
       <div class="bg-[#F9DF8A] rounded-lg flex flex-col items-center p-4">
         <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center">
@@ -227,10 +244,118 @@ h1 {
   </section>  
  
 <!-- Trending pet products -->
+<section class="bg-[#FFF9F4] my-28 px-4 md:px-10 lg:px-0">
+  <div>
+    <h2 class="text-2xl font-bold mb-6 md:mb-10 text-left lg:ml-[10.75rem] adlam-display">
+      Trending pet products
+    </h2>
+  </div>
 
-<section>
-  
+  <div class="max-w-[900px] mx-auto flex flex-col lg:flex-row gap-6 lg:ml-52">
+    
+    <!-- Left Section -->
+    <div class="flex justify-center lg:justify-start">
+      <div class="bg-yellow-200 p-6 rounded-lg w-[250px]">
+        <h2 class="text-lg font-bold adlam-display">T-Shirt For Dogs</h2>
+        <p class="text-sm text-gray-700 mt-2 sora-font">
+          Discover a world of treats, toys, and essentials handpicked for
+        </p>
+        <button class="mt-4 bg-white text-black px-4 py-2 rounded-md shadow-md sora-font">
+          Shop Now
+        </button>
+        <img src="c1-assets/cute-pet-mid.png" alt="Dog" class="mt-4 w-full rounded-md">
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full lg:w-[600px]">
+      
+      <!-- Product Cards -->
+       <!-- card 1 -->
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-5">
+        <img src="c1-assets/dog-cartoon.png" alt="Pet Icon" class="mb-2 bg-[#FFF9F4] rounded-lg">
+        <div>
+          <p class="text-sm font-semibold sora-font">Dog food</p>
+          <p class="text-sm text-gray-600 sora-font">$39.99</p>
+          <p class="text-yellow-500 text-sm sora-font">⭐ 4.5</p>
+        </div>
+      </div>
+<!-- card 2 -->
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-5">
+        <img src="c1-assets/fish-cartoon.png" alt="Pet Icon" class="mb-2">
+        <div>
+          <p class="text-sm font-semibold sora-font">Cat food</p>
+          <p class="text-sm text-gray-600 sora-font">$39.99</p>
+          <p class="text-yellow-500 text-sm sora-font">⭐ 4.5</p>
+        </div>
+      </div>
+<!-- card 3 -->
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-5">
+        <img src="c1-assets/bird-cartoon.png" alt="Pet Icon" class="mb-2">
+        <div>
+          <p class="text-sm font-semibold sora-font">Bird Food</p>
+          <p class="text-sm text-gray-600 sora-font">$39.99</p>
+          <p class="text-yellow-500 text-sm sora-font">⭐ 4.5</p>
+        </div>
+      </div>
+<!-- card 4 -->
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-5">
+        <img src="c1-assets/rabbit-cartoon.png" alt="Pet Icon" class="mb-2">
+        <div>
+          <p class="text-sm font-semibold sora-font">Rabbit Food</p>
+          <p class="text-sm text-gray-600 sora-font">$49.99</p>
+          <p class="text-yellow-500 text-sm sora-font">⭐ 4.5</p>
+        </div>
+      </div>
+<!-- card 5 -->
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-5">
+        <img src="c1-assets/bird-cartoon.png" alt="Pet Icon" class="mb-2">
+        <div>
+          <p class="text-sm font-semibold sora-font">Bird Food</p>
+          <p class="text-sm text-gray-600 sora-font">$89.99</p>
+          <p class="text-yellow-500 text-sm sora-font">⭐ 4.5</p>
+        </div>
+      </div>
+<!-- card 6 -->
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-5">
+        <img src="c1-assets/pet-couch.png" alt="Pet Icon" class="mb-2">
+        <div>
+          <p class="text-sm font-semibold sora-font">Pet Bed</p>
+          <p class="text-sm text-gray-600 sora-font">$79.99</p>
+          <p class="text-yellow-500 text-sm sora-font">⭐ 4.5</p>
+        </div>
+      </div>
+<!-- card 7 -->
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-5">
+        <img src="c1-assets/fish-cartoon.png" alt="Pet Icon" class="mb-2">
+        <div>
+          <p class="text-sm font-semibold sora-font">Fish Feed</p>
+          <p class="text-sm text-gray-600 sora-font">$39.99</p>
+          <p class="text-yellow-500 text-sm sora-font">⭐ 4.5</p>
+        </div>
+      </div>
+<!-- card 8 -->
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-5">
+        <img src="c1-assets/pet-couch.png" alt="Pet Icon" class="mb-2">
+        <div>
+          <p class="text-sm font-semibold sora-font">Pet Bed</p>
+          <p class="text-sm text-gray-600 sora-font">$79.99</p>
+          <p class="text-yellow-500 text-sm sora-font">⭐ 5.00</p>
+        </div>
+      </div>
+<!-- card 9 -->
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-5">
+        <img src="c1-assets/rabbit-cartoon.png" alt="Pet Icon" class="mb-2">
+        <div>
+          <p class="text-sm font-semibold sora-font">Rabbit Food</p>
+          <p class="text-sm text-gray-600 sora-font">$49.99</p>
+          <p class="text-yellow-500 text-sm sora-font">⭐ 4.5</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
     <!-- Everyday low price section -->
     <section class="relative px-6">
       <!-- Heading -->
@@ -293,11 +418,13 @@ h1 {
         <img src="c1-assets/logo-footer.png" alt="Logo" class="h-10">
         <h2 class="text-xl font-medium adlam-display">Paw<span class="text-white">4</span>Pets</h2>
       </div>
-      <p class="text-sm sora-font">Discover a world of treats, toys, and essentials handpicked for your furry friends.</p>
+      <p class="text-sm sora-font">Discover a world of treats, toys, and essentials handpicked for your furry friends.
+        Also contact us if you want to adopt a new pet friend in your life ❤
+      </p>
     </div>
 
     <!-- Navigation Links -->
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-2">
       <a href="#" class="hover:underline sora-font">Find a pet</a>
       <a href="#" class="hover:underline sora-font">Breeds</a>
       <a href="#" class="hover:underline sora-font">Contact us</a>
